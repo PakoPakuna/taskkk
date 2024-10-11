@@ -1,0 +1,6 @@
+.container { display: flex; flex-wrap: wrap; }
+.form-container, .preview-container { flex: 1; min-width: 300px; padding: 20px; }
+.task-card { padding: 10px; border-radius: 5px; }
+.low { background-color: #90EE90; }
+.medium { background-color: #FFA500; }
+.high { background-color: #FF6347; }

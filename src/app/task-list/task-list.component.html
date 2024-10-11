@@ -1,0 +1,22 @@
+<div class="container">
+    <h2>Task List</h2>
+    <div class="filters">
+      <input [(ngModel)]="searchTerm" (ngModelChange)="applyFilters()" placeholder="Search by title">
+      <select [(ngModel)]="selectedPriority" (ngModelChange)="applyFilters()">
+        <option value="">All Priorities</option>
+        <option value="1">Low</option>
+        <option value="2">Medium</option>
+        <option value="3">High</option>
+      </select>
+    </div>
+    <div class="task-grid">
+      <div *ngFor="let task of filteredTasks" class="task-card" [ngClass]="getPriorityClass(task.priority)">
+        <h3>{{ task.title }}</h3>
+        <p>{{ task.description }}</p>
+        <p>Priority: {{ getPriorityText(task.priority) }}</p>
+        <p>Due Date: {{ task.dueDate }}</p>
+        <button (click)="deleteTask(task.id)">Delete</button>
+      </div>
+    </div>
+    <button class="task-button" (click)="navigateTo('create')">Go back to Create Task</button>
+  </div>

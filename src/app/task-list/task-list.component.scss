@@ -1,0 +1,25 @@
+.container { padding: 20px; }
+.filters { margin-bottom: 20px; }
+.task-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+.task-card { padding: 10px; border-radius: 5px; }
+.low { background-color: #90EE90; }
+.medium { background-color: #FFA500; }
+.high { background-color: #FF6347; }
+@media (max-width: 768px) { .task-grid { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); } }
+@media (max-width: 480px) { .task-grid { grid-template-columns: 1fr; } }
+.task-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+  background-color: rgb(216, 216, 216);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 3px;
+  &:hover {
+    background-color: rgb(176, 176, 176);
+  }
+
+}
+
